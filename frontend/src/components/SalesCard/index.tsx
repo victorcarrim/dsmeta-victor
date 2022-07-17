@@ -68,12 +68,12 @@ function SalesCard() {
                                     <tr key={sale.id}>
                                         <td className="show992">{sale.id}</td>
                                         <td className="show576">{new Date(sale.date).toLocaleDateString()}</td>
-                                        <td>{sale.sellerName}</td>
+                                        <td>{sale.sallerName}</td>
                                         <td className="show992">{sale.visited}</td>
                                         <td className="show992">{sale.deals}</td>
                                         <td>R$ {sale.amount.toFixed(2)}</td>
                                         <div className = "dsmeta-notification-button-container">
-                                            <NotificationButton />
+                                            <NotificationButton saleId={sale.id}/>
                                         </div>
                                     </tr>
                                 );
